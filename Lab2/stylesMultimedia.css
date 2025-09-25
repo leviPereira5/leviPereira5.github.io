@@ -1,0 +1,63 @@
+
+ .Fotografias {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 10px;
+
+        }
+
+        .Fotografias img {
+            width: 150px;
+            border-radius: 20px;
+        }
+
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: auto;
+    background-color: rgb(155, 107, 17);
+
+}
+
+nav{
+    display: flex;
+    padding: 20px;
+    gap: 20px;
+    background-color: rgb(155, 107, 17);
+}
+
+nav a {
+    padding: 10px 20px;
+    background-color: rgb(120, 100, 65);
+    text-decoration: none;
+    color: black;
+    border-radius: 5px;
+   
+}
+
+p:nth-child(odd) {
+  color: #1e88e5;
+  font-style: italic;
+}
+
+p:nth-child(even) {
+  color: #2e7d32;
+}
+
+body{
+    background-color: #f4e1c1;
+}
+
+.Poesia {
+  display: flex;
+  flex-wrap: wrap; /* permite quebrar linha */
+  gap: 20px;
+}
+
+.Poesia p {
+  flex: 1 1 45%; /* cada verso ocupa 45% da largura */
+}

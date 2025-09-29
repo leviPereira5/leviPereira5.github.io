@@ -1,0 +1,29 @@
+body {
+    background-color: rgb(230, 200, 164);
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: rgb(155, 107, 17);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav a {
+    padding: 10px 20px;
+    background-color: rgb(120, 100, 65);
+    text-decoration: none;
+    color: black;
+    border-radius: 5px;
+}

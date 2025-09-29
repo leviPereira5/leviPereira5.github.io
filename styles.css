@@ -1,5 +1,91 @@
-body {
-    background-color: yellowgreen;
+* {
+  font-family: sans-serif;
+  padding: 0;
+  margin: 0;
 }
 
-img { width: 300px}
+header, footer, section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header {
+  background: red;
+  position: sticky;
+  height: 10vh;
+  top: 0;
+}
+
+section {
+  width: 100%;
+}
+
+/* HERO IMAGE */
+#inicio {
+  height: 90vh;
+  background: url('hero.jpg') no-repeat center center;
+  background-size: cover;
+  position: relative; /* importante para o texto absoluto */
+}
+
+/* Texto motivacional */
+.hero-texto {
+  position: absolute;
+  top: 40%;
+  left: 10%;
+  color: rgb(44, 38, 38);
+  font-size: 4vh;
+  max-width: 500px;
+}
+
+/* Botão call-to-action */
+.cta-btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 1rem 2rem;
+  background: #ff6600;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.cta-btn:hover {
+  background: #e55b00;
+}
+
+/* PROJETOS */
+#projetos {
+  height: 100vh;
+  background: orange;
+  font-size: 5vh;
+}
+
+/* DISCIPLINA */
+#cadeira {
+  height: 80vh;
+  background: purple;
+  color: white;
+  font-size: 5vh;
+}
+
+footer {
+  height: 10vh;
+  background: black;
+  color: white;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 1rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: inherit;
+}

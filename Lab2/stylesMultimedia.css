@@ -61,3 +61,13 @@ body{
 .Poesia p {
   flex: 1 1 45%; /* cada verso ocupa 45% da largura */
 }
+
+.Poesia {
+    border: 2px solid #4a90e2;   /* borda azul */
+    background-color: #f0f8ff;   /* fundo suave */
+    padding: 20px;               /* espaço interno */
+    margin: 20px 0;              /* espaço externo */
+    border-radius: 12px;         /* cantos arredondados */
+    font-style: italic;          /* estilo poético */
+    line-height: 1.6;            /* espaço entre linhas */
+}

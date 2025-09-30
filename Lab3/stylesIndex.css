@@ -3,7 +3,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
+    font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+    scroll-behavior: smooth;
 }
 
 /* HEADER */
@@ -11,52 +12,72 @@ header {
     position: sticky;
     top: 0;
     width: 100%;
-    background: #605d88;
+    background: linear-gradient(90deg, #605d88 60%, #8d00e5 100%);
     color: white;
     z-index: 10;
+    box-shadow: 0 2px 16px rgba(80, 0, 120, 0.12);
+    border-bottom-left-radius: 18px;
+    border-bottom-right-radius: 18px;
+    transition: box-shadow 0.3s;
 }
 
 header .overlay {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
-    padding: 1rem 5%;
+    padding: 1.2rem 6%;
+    gap: 1.2rem;
 }
 
 header h1 {
-    font-size: 1.8rem;
+    margin-right: auto;
+}
+
+header h1 {
+    font-size: 2.2rem;
     max-width: 60%;
+    letter-spacing: 1.5px;
+    font-weight: 700;
+    text-shadow: 0 2px 8px rgba(80,0,120,0.10);
 }
 
 /* Menu */
 header nav ul {
     list-style: none;
     display: flex;
-    gap: 1rem;
+    gap: 1.2rem;
     flex-wrap: wrap;
+    margin-left: auto;
 }
 
 header nav a {
     text-decoration: none;
     color: white;
-    font-weight: bold;
-    padding: 0.5rem 1rem;
-    border-radius: 8px;
-    background: rgba(255,255,255,0.1);
-    transition: all 0.3s ease;
+    font-weight: 600;
+    padding: 0.6rem 1.2rem;
+    border-radius: 12px;
+    background: rgba(255,255,255,0.10);
+    box-shadow: 0 2px 8px rgba(80,0,120,0.07);
+    transition: all 0.25s cubic-bezier(.4,2,.6,1);
+    letter-spacing: 0.5px;
 }
 
 header nav a:hover {
-    background: #8d00e5;
-    transform: translateY(-3px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    background: linear-gradient(90deg, #8d00e5 60%, #605d88 100%);
+    color: #fffbe7;
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 6px 18px rgba(80,0,120,0.18);
 }
 
 #projetos {
-  position: relative;
-  min-height: 60vh;
-  background: url("images/lencoisMaranhenses.avif") no-repeat center center/cover;
+    position: relative;
+    min-height: 60vh;
+    background: linear-gradient(120deg, rgba(141,0,229,0.18) 0%, rgba(96,93,136,0.18) 100%), url("images/lencoisMaranhenses.avif") no-repeat center center/cover;
+    border-radius: 18px;
+    box-shadow: 0 4px 32px rgba(80,0,120,0.10);
+    margin: 2rem 0 2.5rem 0;
+    overflow: hidden;
 }
 #projetos::before {
   content: none; /* remove overlay escuro */
@@ -65,29 +86,45 @@ header nav a:hover {
 
 /* HERO */
 main {
-    padding: 2rem 5%;
+    padding: 2.5rem 7%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 1.5rem;
+    gap: 2rem;
+    background: #f7f6fb;
+    border-radius: 18px;
+    box-shadow: 0 2px 24px rgba(80,0,120,0.07);
+    margin-bottom: 2.5rem;
 }
 
 main h2 {
-    font-size: 2rem;
+    font-size: 2.3rem;
+    color: #8d00e5;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    letter-spacing: 1px;
 }
 
 main p {
-    font-size: 1.2rem;
+    font-size: 1.18rem;
+    color: #3a3552;
+    line-height: 1.7;
+    margin-bottom: 0.5rem;
 }
 
 /* FOOTER */
 footer {
-    height: 10vh;
-    background: black;
-    color: white;
+    min-height: 10vh;
+    background: linear-gradient(90deg, #605d88 60%, #8d00e5 100%);
+    color: #fffbe7;
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+    border-top-left-radius: 18px;
+    border-top-right-radius: 18px;
+    box-shadow: 0 -2px 16px rgba(80,0,120,0.10);
 }
 
 /* RESPONSIVIDADE */
@@ -97,13 +134,13 @@ footer {
     header .overlay {
         flex-direction: column;
         align-items: center;
-        gap: 1rem;
+        gap: 1.2rem;
     }
 
     header h1 {
         text-align: center;
         max-width: 100%;
-        font-size: 1.5rem;
+        font-size: 1.4rem;
     }
 
     header nav ul {
@@ -127,20 +164,47 @@ footer {
     main {
         align-items: center;
         text-align: center;
+        padding: 1.5rem 3%;
+    }
+
+    #projetos {
+        margin: 1.2rem 0 1.5rem 0;
+        border-radius: 12px;
+    }
+
+    main {
+        border-radius: 12px;
+    }
+
+    footer {
+        border-radius: 0;
     }
 }
 
-/* Mobile extremo */
+
 @media (max-width: 480px) {
     header h1 {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
     }
 
     main h2 {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
 
     main p {
-        font-size: 1rem;
+        font-size: 0.98rem;
+    }
+
+    #projetos {
+        border-radius: 8px;
+    }
+
+    main {
+        border-radius: 8px;
+    }
+
+    footer {
+        border-radius: 0;
+        font-size: 0.98rem;
     }
 }

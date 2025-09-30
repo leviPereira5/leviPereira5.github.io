@@ -1,51 +1,104 @@
 <!DOCTYPE html>
 <html lang="pt">
-
 <head>
-    <meta charset="UTF-8">
-    <title>Primeira Página</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <title>Página com Vídeo de Fundo</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-    <header>
-        <p>menu</p>
-    </header>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#inicio">Sobre</a></li>
+        <li><a href="#projetos">Trabalho</a></li>
+        <li><a href="#cadeira">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <main>
-        
+  <section id="inicio">
+    <video class="video-fundo" autoplay muted loop playsinline>
+      <source src="videos/fumaca.mp4" type="video/mp4">
+      <!-- fallback, se o navegador não suportar vídeo -->
+    </video>
+    <div class="hero-texto">
+      <h1>Ricardo Silva é um programador que desenvolve aplicações webs criativas</h1>
+      <a href="#projetos" class="cta-btn">Ver Projetos</a>
     </div>
-     
-        <section id="inicio">
-            <div class="hero-texto">
-                <h1>Constrói o teu futuro com código 🚀</h1>
-                <a href="#projetos" class="cta-btn">Ver Projetos</a>
+  </section>
 
-             <div class="overlay">
-        <h1>Parque Nacional dos Lençóis Maranhenses</h1>
-        <nav>
-            <ul>
-                <li><a href="Lab3/index.html">Lab3</a></li>
-               
-            </ul>
-        </nav>
-            </div>
-        </section>
+<section id="projetos">
+  <div class="conteudo-projetos">
+    <h2>Os Meus Projetos</h2>
+    <div class="grid-projetos">
+      
+      <div class="projeto-container">
+        <h3 class="titulo-projeto">Lab1</h3>
+        <div class="projeto">
+          <p>Descrição breve do projeto Lab1.</p>
+          <a href="Lab1/index.html" class="btn-projeto">Ver Projeto</a>
+        </div>
+      </div>
 
-        <!-- PROJETOS -->
-        <section id="projetos">
-            <p>os meus labs</p>
-        </section>
+      <div class="projeto-container">
+        <h3 class="titulo-projeto">Lab2</h3>
+        <div class="projeto">
+          <p>Descrição breve do projeto Lab2.</p>
+          <a href="Lab2/index.html" class="btn-projeto">Ver Projeto</a>
+        </div>
+      </div>
 
-        <!-- DISCIPLINA -->
-        <section id="cadeira">
-            <p>diw 🎉</p>
-        </section>
-    </main>
+      <div class="projeto-container">
+        <h3 class="titulo-projeto">Lab3</h3>
+        <div class="projeto">
+          <p>Descrição breve do projeto Lab3.</p>
+          <a href="Lab3/index.html" class="btn-projeto">Ver Projeto</a>
+        </div>
+      </div>
 
-    <footer>
-        <p>Universidade Lusófona © 2025</p>
-    </footer>
+    </div>
+  </div>
+</section>
+
+
+  </div>
+</section>
+
+
+ <section id="cadeira">
+  <div class="conteudo-cadeira">
+    <h1>O meu primeiro site</h1>
+    <p>Eis a minha primeira página Web</p>
+
+    <p>
+      Na Unidade Curricular de 
+      <a href="#">Desenvolvimento de Interfaces Web</a> 
+      abordamos as seguintes tecnologias Web 🌐
+    </p>
+
+    <ul>
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JavaScript</li>
+      <li>React e Next.js</li>
+    </ul>
+
+    <p>Iremos criar soluções criativas!</p>
+
+    <ul>
+      <li><a href="Lab1/index.html">Lab1</a></li>
+      <li><a href="Lab2/index.html">Lab2</a></li>
+    </ul>
+
+    <img src="images/diw.svg" alt="Palavras Web" class="imagem-cadeira">
+
+    <p>Universidade Lusófona, 2025</p>
+  </div>
+</section>
+
+
+  <footer>
+    <p>Universidade Lusófona © 2025</p>
+  </footer>
 </body>
-
 </html>

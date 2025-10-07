@@ -63,10 +63,9 @@ nav a:hover {
 
 main {
     max: width 700px;
-    margin: 50px 0 50px 0px; /* espaço em cima, direita, baixo e desloca para a esquerda */
+    margin: 50px 0 50px 0px; 
     padding: 10px;
-    background: rgba(0,102,204,0.1); /* azul claro translúcido que combina com água */
-    border-radius: 8px;
+    background: rgba(0,102,204,0.1); 
     
 }
 

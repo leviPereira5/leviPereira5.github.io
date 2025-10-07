@@ -1,0 +1,45 @@
+   body {
+
+       font-family: Arial, sans-serif;
+       text-align: center;
+       background-color: #14143a;
+   }
+
+   header,
+   footer {
+       background-color: #223d63;
+       color: white;
+       padding: 1em;
+   }
+
+   main {
+       margin: 2em auto;
+       width: 80%;
+       background: rgb(122, 134, 201);
+       padding: 2em;
+       border-radius: 10px;
+       box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+   }
+
+   img {
+       width: 200px;
+       border-radius: 10px;
+       transition: transform 0.3s;
+   }
+
+   img:hover {
+       transform: scale(1.1);
+   }
+
+   button {
+       margin: 0.5em;
+       padding: 10px 20px;
+       font-size: 16px;
+       cursor: pointer;
+   }
+
+   #contador {
+       font-weight: bold;
+       font-size: 18px;
+       color: rgb(78, 6, 56);
+   }

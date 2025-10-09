@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #idPinta,
+        #idEscreve,
+        #idEscolhaUmaCor {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        main {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            background-color: purple;
+        }
+
+        section {
+            width: 300px;
+            background-color: violet;
+            padding: 10px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <section id="idpassa">
+            <p>1.Passa por aqui!</p>
+
+            <script>
+                // A.variáveis
+                const frase = document.querySelector("#idpassa p");
+
+                // B.evento (associação de elementos e eventos)
+                const mudarFrase = (modo) => {
+                    if (modo === true) {
+                        frase.textContent = "1.Obrigado por passares!";
+                    } else {
+                        frase.textContent = "1.Passa por aqui!";
+                    }
+                }
+
+                // C.atribuição de eventos
+                frase.onmouseover = () => mudarFrase(true);
+                frase.onmouseout = () => mudarFrase(false);
+            </script>
+        </section>
+
+        <section id="idPinta">
+            <p>2.Pinta-me!</p>
+            <button>Red</button>
+            <button>Green</button>
+            <button>Blue</button>
+
+            <script>
+                const botaoRed = document.querySelector("#idPinta button:nth-of-type(1)");
+                const botaoGreen = document.querySelector("#idPinta button:nth-of-type(2)");
+                const botaoBlue = document.querySelector("#idPinta button:nth-of-type(3)");
+                const paragrafo = document.querySelector("#idPinta p");
+
+                function mudarCor(cor) {
+                    paragrafo.style.color = cor;
+                }
+
+                botaoRed.onclick = () => mudarCor('red');
+                botaoGreen.addEventListener('click', () => mudarCor('green'));
+                botaoBlue.onclick = () => mudarCor('blue');
+            </script>
+        </section>
+
+        <section id="idEscreve">
+            <label for="3">3.Experimenta escrever...</label>
+            <input id="inputText" type="text">
+
+            <script>
+                const input = document.querySelector("#idEscreve input");
+                const cores = ['red', 'blue', 'green', 'yellow', 'purple', 'pink', 'orange', 'brown', 'black', 'gray'];
+                let i = 0;
+
+                function colorir() {
+                    input.style.backgroundColor = cores[i];
+                    i++;
+                    if (i >= cores.length) {
+                        i = 0;
+                    }
+                }
+
+                input.onkeyup = colorir;
+            </script>
+        </section>
+
+        <section id="idEscolhaUmaCor">
+            <label>4.Escolhe uma cor:</label>
+            <input type="text" placeholder="Ex: red">
+            <button>Submeter</button>
+
+            <script>
+                // A.variáveis
+                const texto = document.querySelector("#idEscolhaUmaCor input");
+                const botao = document.querySelector("#idEscolhaUmaCor button");
+
+                // Lista de cores válidas
+                const coresValidas = ['red', 'blue', 'green', 'yellow', 'purple', 'pink', 'orange', 'brown', 'black', 'gray'];
+
+                // Função para mudar a cor de fundo
+                function mudarCorBackground() {
+                    const corEscolhida = texto.value.toLowerCase();
+
+                    if (coresValidas.includes(corEscolhida)) {
+                        document.body.style.backgroundColor = corEscolhida;
+                    } else {
+                        alert("Cor inválida! Tenta uma destas: " + coresValidas.join(", "));
+                    }
+                }
+
+                // C.atribuição de evento
+                botao.onclick = mudarCorBackground;
+            </script>
+        </section>
+    </main>
+</body>
+
+</html>

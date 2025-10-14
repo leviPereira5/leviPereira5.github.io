@@ -2,150 +2,147 @@
 <html lang="pt">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-        }
+        <style>
+                * {
+                        margin: 0;
+                        padding: 0;
+                }
 
-        #idPinta,
-        #idEscreve,
-        #idEscolhaUmaCor {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
+                #idPinta,
+                #idEscreve,
+                #idEscolhaUmaCor {
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+                }
 
-        main {
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 20px;
-            background-color: whitesmoke;
-            /* mantive, mas o script irá alterar "main" */
-        }
+                main {
+                        height: 100vh;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        gap: 20px;
+                        background-color: whitesmoke;
+                        /* mantive, mas o script irá alterar "main" */
+                }
 
-        section {
-            width: 300px;
-            background-color: violet;
-            padding: 10px;
-            border-radius: 10px;
-        }
-    </style>
+                section {
+                        width: 300px;
+                        background-color: violet;
+                        padding: 10px;
+                        border-radius: 10px;
+                }
+        </style>
 </head>
 
 <body>
-    <main>
-        <section id="idpassa">
-            <p>1.Passa por aqui!</p>
-            <script>
-                const frase = document.querySelector("#idpassa p");
-                const mudarFrase = (modo) => {
-                    frase.textContent = modo ? "1.Obrigado por passares!" : "1.Passa por aqui!";
-                }
-                frase.onmouseover = () => mudarFrase(true);
-                frase.onmouseout = () => mudarFrase(false);
-            </script>
-        </section>
+        <main>
+                <section id="idpassa">
+                        <p>1.Passa por aqui!</p>
+                        <script>
+                                const frase = document.querySelector("#idpassa p");
+                                const mudarFrase = (modo) => {
+                                        frase.textContent = modo ? "1.Obrigado por passares!" : "1.Passa por aqui!";
+                                }
+                                frase.onmouseover = () => mudarFrase(true);
+                                frase.onmouseout = () => mudarFrase(false);
+                        </script>
+                </section>
 
-        <section id="idPinta">
-            <p>2.Pinta-me!</p>
-            <button>Red</button>
-            <button>Green</button>
-            <button>Blue</button>
+                <section id="idPinta">
+                        <p>2.Pinta-me!</p>
+                        <button>Red</button>
+                        <button>Green</button>
+                        <button>Blue</button>
 
-            <script>
-                const botaoRed = document.querySelector("#idPinta button:nth-of-type(1)");
-                const botaoGreen = document.querySelector("#idPinta button:nth-of-type(2)");
-                const botaoBlue = document.querySelector("#idPinta button:nth-of-type(3)");
-                const paragrafo = document.querySelector("#idPinta p");
+                        <script>
+                                const botaoRed = document.querySelector("#idPinta button:nth-of-type(1)");
+                                const botaoGreen = document.querySelector("#idPinta button:nth-of-type(2)");
+                                const botaoBlue = document.querySelector("#idPinta button:nth-of-type(3)");
+                                const paragrafo = document.querySelector("#idPinta p");
 
-                function mudarCor(cor) { paragrafo.style.color = cor; }
+                                function mudarCor(cor) { paragrafo.style.color = cor; }
 
-                botaoRed.onclick = () => mudarCor('red');
-                botaoGreen.addEventListener('click', () => mudarCor('green'));
-                botaoBlue.onclick = () => mudarCor('blue');
-            </script>
-        </section>
+                                botaoRed.onclick = () => mudarCor('red');
+                                botaoGreen.addEventListener('click', () => mudarCor('green'));
+                                botaoBlue.onclick = () => mudarCor('blue');
+                        </script>
+                </section>
 
-        <section id="idEscreve">
-            <label for="inputText">3.Experimenta escrever...</label>
-            <input id="inputText" type="text">
-            <script>
-                const input = document.querySelector("#idEscreve input");
-                const cores = ['red', 'blue', 'green', 'yellow', 'purple', 'pink', 'orange', 'brown', 'black', 'gray'];
-                let i = 0;
-                function colorir() {
-                    input.style.backgroundColor = cores[i++];
-                    if (i >= cores.length) i = 0;
-                }
-                input.onkeyup = colorir;
-            </script>
-        </section>
+                <section id="idEscreve">
+                        <label for="inputText">3.Experimenta escrever...</label>
+                        <input id="inputText" type="text">
+                        <script>
+                                const input = document.querySelector("#idEscreve input");
+                                const cores = ['red', 'blue', 'green', 'yellow', 'purple', 'pink', 'orange', 'brown', 'black', 'gray'];
+                                let i = 0;
+                                function colorir() {
+                                        input.style.backgroundColor = cores[i++];
+                                        if (i >= cores.length) i = 0;
+                                }
+                                input.onkeyup = colorir;
+                        </script>
+                </section>
 
-        <section id="idEscolhaUmaCor">
-            <label>4. Escolha uma cor:</label>
-            <select id="corEscolhida">
-                <option value="white">White</option>
-                <option value="red">Red</option>
-                <option value="blue">Blue</option>
-                <option value="green">Green</option>
-                <option value="yellow">Yellow</option>
-                <option value="purple">Purple</option>
-                <option value="pink">Pink</option>
-                <option value="orange">Orange</option>
-                <option value="brown">Brown</option>
-                <option value="black">Black</option>
-                <option value="gray">Gray</option>
-            </select>
+                <section id="idEscolhaUmaCor">
+                        <label>4. Escolha uma cor:</label>
+                        <select id="corEscolhida">
+                                <option value="white">White</option>
+                                <option value="red">Red</option>
+                                <option value="blue">Blue</option>
+                                <option value="green">Green</option>
+                                <option value="yellow">Yellow</option>
+                                <option value="purple">Purple</option>
+                                <option value="pink">Pink</option>
+                                <option value="orange">Orange</option>
+                                <option value="brown">Brown</option>
+                                <option value="black">Black</option>
+                                <option value="gray">Gray</option>
+                        </select>
 
-            <script>
+                        <script>
 
-                const select = document.querySelector("#corEscolhida");
-                const main = document.querySelector("main");
-
-
-                select.onchange = function () {
-                    const cor = select.value;
-                    main.style.backgroundColor = cor;
-                };
-
-            </script>
-        </section>
+                                const select = document.querySelector("#corEscolhida");
+                                const main = document.querySelector("main");
 
 
-        <section id="idConta">
+                                select.onchange = function () {
+                                        const cor = select.value;
+                                        main.style.backgroundColor = cor;
+                                };
 
-            <p>5.</p>
-            <button>conta!</button>
-
-            <script>
-                const botaoConta = document.querySelector("#idConta button");
-                const Conta = document.querySelector("#idConta p");
-
-                let contador = 0;
-
-                botaoConta.onclick = function () {
-                    contador++;
-                    Conta.textContent = contador;
-                }; 
-            </script>
+                        </script>
+                </section>
 
 
-        </section>
+                <section id="idConta">
 
-    </main>
+                        <p>0</p>
+                        <button>conta!</button>
+
+                        <script>
+                                const botaoConta = document.querySelector("#idConta button");
+                                const Conta = document.querySelector("#idConta p");
+
+                                let contador = 0;
+
+                                botaoConta.onclick = function contar() {
+                                        contador++;
+                                        Conta.textContent = contador;
+                                }; 
+                        </script>
 
 
+                </section>
 
+        </main>
 
 
 </body>
 
-</html>
+</html>>

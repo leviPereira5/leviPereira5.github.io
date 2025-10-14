@@ -1,0 +1,66 @@
+* {
+    font-family: sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #09775f;
+    color: white;
+    padding: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    top: 0;
+    position: sticky;
+}
+
+header nav a:hover {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: rgb(72, 21, 57);
+    text-decoration: none;
+}
+
+nav a:hover {
+    background: rgb(64, 196, 172);
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+
+nav ul {
+    text-decoration: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav li {
+    color: white;
+    list-style: none;
+}
+
+nav a {
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+
+section {
+    height: 90vh;
+}
+
+#produtos {
+    background-color: #219187;
+}
+
+#cesto {
+    background-color: #26534f;
+}

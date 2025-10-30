@@ -1,29 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Loja virtual</title>
+  <title>Loja Virtual</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header>
-    <h1>Loja</h1>
+    <h1>🛒 Loja Virtual</h1>
     <nav>
       <ul>
-        <li><a href="#produtos">Home</a></li>
-        <li><a href="#cesto">Sobre</a></li>
+        <li><a href="#produtos">Produtos</a></li>
+        <li><a href="#cesto">Cesto</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <section id="produtos"></section>
-    <section id="cesto"></section>
+    <!-- Seção de produtos -->
+    <section id="produtos">
+      <h2>Produtos disponíveis</h2>
+      <!-- Os produtos serão inseridos aqui via JS -->
+    </section>
+
+    <!-- Seção do cesto -->
+    <section id="cesto">
+      <h2>Meu Cesto</h2>
+
+      <!-- Aqui o JS vai inserir os produtos selecionados -->
+      <section id="produtos-selecionados"></section>
+
+      <!-- Total -->
+      <p id="total">💵 Total: R$ 0,00</p>
+    </section>
   </main>
 
-  <footer></footer>
+  <footer>
+    <p>© 2025 Loja Virtual — Todos os direitos reservados</p>
+  </footer>
 
+  <!-- Scripts -->
   <script src="produtos.js"></script>
   <script src="main.js"></script>
 </body>

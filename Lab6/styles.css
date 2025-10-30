@@ -6,6 +6,16 @@
   box-sizing: border-box;
 }
 
+main {
+  display: grid;
+  grid-template-rows: auto auto; /* produtos em cima, cesto embaixo */
+  gap: 3em;
+  padding: 2em;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
 /* ======== CABEÇALHO ======== */
 header {
   background-color: #09775f;
@@ -67,6 +77,13 @@ body {
   margin: 0 auto;
 }
 
+#produtos h2 {
+  color: white;
+  margin-bottom: 1.5em;
+  text-align: center;
+}
+
+
 
 article.produto {
   background:white;
@@ -111,4 +128,43 @@ article.produto span {
   font-weight: bold;
   color: #0a6651;
   font-size: 1rem;
+}
+
+/* ======== CESTO ======== */
+#cesto {
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  padding: 2em;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  margin-top: 2em;
+}
+
+#cesto h2 {
+  color: #09775f;
+  margin-bottom: 1em;
+  text-align: center;
+}
+
+#produtos-selecionados {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1em;
+}
+
+article.produto-cesto {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#total {
+  text-align: right;
+  margin-top: 1.5em;
+  font-weight: bold;
+  color: #09775f;
+  font-size: 1.2rem;
 }

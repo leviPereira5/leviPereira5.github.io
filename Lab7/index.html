@@ -22,25 +22,27 @@
   <main>
 
     <!-- 🔎 Área de filtros -->
-    <section id="filtros">
-      <p>Pesquisar:
-        <input type="text" id="pesquisa" placeholder="Digite o nome do produto">
-      </p>
+   <section id="filtros">
+  <h2>Selecione os seus Produtos</h2>
+  <p>
+    <strong>Filtrar</strong>
+    <select id="categorias">
+      <option value="">Todas as categorias</option>
+    </select>
 
-      <p>Filtrar por categoria:
-        <select id="categorias"></select>
-      </p>
+    <strong>Ordenar</strong>
+    <select id="ordenar">
+      <option value="">Ordenar pelo preço</option>
+      <option value="desc">Preço Decrescente</option>
+      <option value="asc">Preço Crescente</option>
+    </select>
 
-      <p>Ordenar por preço:
-        <select id="ordenar">
-          <option value="">Sem ordenação</option>
-          <option value="asc">Menor preço → Maior preço</option>
-          <option value="desc">Maior preço → Menor preço</option>
-        </select>
-      </p>
-    </section>
+    <strong>Procurar</strong>
+    <input type="text" id="pesquisa" placeholder="pesquise por produto">
+  </p>
+</section>
 
-    
+
     <!-- 🧾 Seção de produtos -->
     <section id="produtos">
       <h2>Produtos disponíveis</h2>
@@ -54,23 +56,24 @@
       <section id="produtos-selecionados"></section>
 
       <p id="total">💵 Total: R$ 0,00</p>
+
+      <section id="checkout">
+        <p>
+          És estudante do DEISI?
+          <input type="checkbox" id="estudante">
+        </p>
+
+        <p>
+          Cupão de desconto:
+          <input type="text" id="cupao">
+        </p>
+
+        <button id="comprar">Comprar</button>
+
+        <p id="resposta-compra"></p>
+      </section>
     </section>
 
-    <section id="checkout">
-  <p>
-    És estudante do DEISI?
-    <input type="checkbox" id="estudante">
-  </p>
-
-  <p>
-    Cupão de desconto:
-    <input type="text" id="cupao">
-  </p>
-
-  <button id="comprar">Comprar</button>
-
-  <p id="resposta-compra"></p>
-</section>
 
   </main>
 

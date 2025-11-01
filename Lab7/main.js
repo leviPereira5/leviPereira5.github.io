@@ -43,7 +43,7 @@ function criarProduto(produto) {
   artigo.appendChild(descricao);
 
   const preco = document.createElement("span");
-  preco.textContent = `R$ ${produto.price.toFixed(2)}`;
+  preco.textContent = ` € ${produto.price.toFixed(2)}`;
   artigo.appendChild(preco);
 
   const botao = document.createElement("button");
@@ -65,14 +65,24 @@ function criaProdutoCesto(produto) {
   const artigo = document.createElement("article");
   artigo.classList.add("produto-cesto");
 
+  // --- Imagem do produto ---
+  const img = document.createElement("img");
+  img.src = produto.image;
+  img.alt = produto.title;
+  img.classList.add("img-cesto");
+  artigo.appendChild(img);
+
+  // --- Nome do produto ---
   const nome = document.createElement("h3");
   nome.textContent = produto.title;
   artigo.appendChild(nome);
 
+  // --- Preço ---
   const preco = document.createElement("span");
-  preco.textContent = `R$ ${produto.price.toFixed(2)}`;
+  preco.textContent = ` € ${produto.price.toFixed(2)}`;
   artigo.appendChild(preco);
 
+  // --- Botão remover ---
   const btnRemover = document.createElement("button");
   btnRemover.textContent = "Remover";
   btnRemover.classList.add("remover");
@@ -92,22 +102,30 @@ function criaProdutoCesto(produto) {
 }
 
 function atualizaCesto() {
+
   const containerCesto = document.getElementById("produtos-selecionados");
   const totalElemento = document.getElementById("total");
-  if (!containerCesto) return;
+
+  if (!containerCesto){
+    return;
+  }
 
   containerCesto.innerHTML = "";
+  
   const lista = JSON.parse(localStorage.getItem("produtos-selecionados")) || [];
 
   let total = 0;
+
   lista.forEach(produto => {
     const artigoCesto = criaProdutoCesto(produto);
     containerCesto.appendChild(artigoCesto);
     total += produto.price;
-  });
+
+  }
+);
 
   if (totalElemento) {
-    totalElemento.textContent = `💵 Total: R$ ${total.toFixed(2)}`;
+    totalElemento.textContent = ` Total:  € ${total.toFixed(2)}`;
   }
 }
 
@@ -205,7 +223,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
 
 
-  const btnComprar = document.getElementById("comprar");
+const btnComprar = document.getElementById("comprar");
 const estudanteCheck = document.getElementById("estudante");
 const cupaoInput = document.getElementById("cupao");
 const respostaCompra = document.getElementById("resposta-compra");

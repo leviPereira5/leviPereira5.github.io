@@ -141,6 +141,14 @@ article.produto span {
   margin-top: 2em;
 }
 
+
+.produto-cesto img.img-cesto {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
 #cesto h2 {
   color: #09775f;
   margin-bottom: 1em;
@@ -195,4 +203,40 @@ article.produto-cesto {
 
 #checkout button:hover {
   background-color: #0c8c70;
+}
+
+#filtros {
+  background-color: #f2f2f2;
+  padding: 1em;
+  text-align: center;
+  border-radius: 10px;
+  margin-bottom: 2em;
+}
+
+#filtros h2 {
+  margin-bottom: 1em;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #000;
+}
+
+#filtros select,
+#filtros input[type="text"] {
+  padding: 0.4em 0.6em;
+  font-size: 1rem;
+  margin-left: 0.5em;
+  margin-right: 1.5em;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background-color: white;
+  transition: all 0.2s ease;
+}
+
+#filtros select:hover,
+#filtros input[type="text"]:hover {
+  border-color: #09775f;
+}
+
+#filtros input::placeholder {
+  color: #888;
 }

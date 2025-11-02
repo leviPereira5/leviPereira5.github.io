@@ -1,4 +1,4 @@
-/* Reset básico */
+
 * {
   font-family: sans-serif;
   padding: 0;
@@ -8,7 +8,7 @@
 
 main {
   display: grid;
-  grid-template-rows: auto auto; /* produtos em cima, cesto embaixo */
+  grid-template-rows: auto auto; 
   gap: 3em;
   padding: 2em;
   max-width: 1200px;
@@ -16,7 +16,7 @@ main {
 }
 
 
-/* ======== CABEÇALHO ======== */
+
 header {
   background-color: #09775f;
   color: white;
@@ -63,7 +63,7 @@ body {
 
 
 #secao-produtos {
-  background-color: #219187; /* a cor principal da loja */
+  background-color: #219187; 
   padding: 3em 0;
 }
 
@@ -112,7 +112,7 @@ article.produto img {
 
 article.produto h2 {
   font-size: 1.1rem;
-  color: #09775f !important; /* garante que prevalece */
+  color: #09775f !important;
   text-align: center;
   margin-bottom: 0.5em;
 }
@@ -132,7 +132,7 @@ article.produto span {
   font-size: 1rem;
 }
 
-/* ======== CESTO ======== */
+
 #cesto {
   background-color: #f5f5f5;
   border-radius: 10px;
@@ -240,3 +240,88 @@ article.produto-cesto {
 #filtros input::placeholder {
   color: #888;
 }
+
+
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+    padding: 1em;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+    padding: 0;
+  }
+
+  nav a {
+    display: block;
+    width: 100%;
+  }
+
+  main {
+    padding: 1em;
+    gap: 2em;
+  }
+
+  #produtos {
+    grid-template-columns: 1fr;
+    gap: 1.5em;
+  }
+
+  article.produto img {
+    max-width: 150px;
+  }
+
+  #cesto {
+    padding: 1em;
+  }
+
+  #filtros {
+    padding: 1em;
+  }
+
+  #checkout input[type="text"] {
+    width: 100%;
+    margin-bottom: 1em;
+  }
+}
+
+
+@media (min-width: 601px) and (max-width: 900px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  #produtos {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2em;
+  }
+
+  article.produto img {
+    max-width: 180px;
+  }
+
+  #cesto {
+    padding: 1.5em;
+  }
+
+  #checkout input[type="text"] {
+    width: 80%;
+  }
+}
+
+
+@media (min-width: 901px) {
+  #produtos {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
+

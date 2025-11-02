@@ -129,7 +129,7 @@ function atualizaCesto() {
   }
 }
 
-// --- Carregar categorias da API ---
+
 async function carregarCategorias() {
   const select = document.getElementById("categorias");
   try {
@@ -160,7 +160,7 @@ async function carregarCategorias() {
   }
 }
 
-// --- Ordenação ---
+
 function aplicarOrdenacao(produtos) {
   if (ordemSelecionada === "asc") {
     return produtos.sort((a, b) => a.price - b.price);
@@ -170,29 +170,28 @@ function aplicarOrdenacao(produtos) {
   return produtos;
 }
 
-// --- Filtrar e atualizar lista ---
+
 function atualizarListaFiltrada() {
   let filtrados = todosOsProdutos;
 
-  // Filtro por categoria
+
   if (categoriaSelecionada) {
     filtrados = filtrados.filter(p => p.category === categoriaSelecionada);
   }
 
-  // Filtro por pesquisa (case insensitive)
+
   if (textoPesquisa.trim() !== "") {
     const pesquisaLower = textoPesquisa.toLowerCase();
     filtrados = filtrados.filter(p => p.title.toLowerCase().includes(pesquisaLower));
   }
 
-  // Ordenar
+
   filtrados = aplicarOrdenacao(filtrados);
 
-  // Mostrar no ecrã
   carregarProdutos(filtrados);
 }
 
-// --- Quando a página carrega ---
+
 document.addEventListener("DOMContentLoaded", async () => {
   try {
     const resposta = await fetch("https://deisishop.pythonanywhere.com/products/");
@@ -202,7 +201,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     carregarProdutos(todosOsProdutos);
     await carregarCategorias();
 
-    // Ordenação
+
     const selectOrdenar = document.getElementById("ordenar");
     selectOrdenar.addEventListener("change", () => {
       ordemSelecionada = selectOrdenar.value;
@@ -255,7 +254,7 @@ btnComprar.addEventListener("click", async () => {
 
     if (response.ok) {
       respostaCompra.innerHTML = `
-        ✅ Compra efetuada com sucesso!<br>
+         Compra efetuada com sucesso!<br>
         <strong>Referência de pagamento:</strong> ${data.reference}<br>
         <strong>Total a pagar:</strong> €${data.total.toFixed(2)}
       `;

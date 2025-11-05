@@ -1,14 +1,14 @@
-// --- Inicialização do localStorage ---
+
 if (!localStorage.getItem("produtos-selecionados")) {
   localStorage.setItem("produtos-selecionados", JSON.stringify([]));
 }
 
-let todosOsProdutos = [];        // Todos os produtos da API
-let categoriaSelecionada = "";   // Categoria atual
-let ordemSelecionada = "";       // Ordenação atual
-let textoPesquisa = "";          // Texto da pesquisa atual
+let todosOsProdutos = [];        
+let categoriaSelecionada = "";   
+let ordemSelecionada = "";       
+let textoPesquisa = "";          
 
-// --- Função para carregar produtos no DOM ---
+
 function carregarProdutos(produtos) {
   const container = document.getElementById("produtos");
   container.innerHTML = "";
@@ -24,7 +24,7 @@ function carregarProdutos(produtos) {
   });
 }
 
-// --- Cria o HTML de um produto ---
+
 function criarProduto(produto) {
   const artigo = document.createElement("article");
   artigo.classList.add("produto");
@@ -60,29 +60,28 @@ function criarProduto(produto) {
   return artigo;
 }
 
-// --- Funções do cesto ---
+
 function criaProdutoCesto(produto) {
   const artigo = document.createElement("article");
   artigo.classList.add("produto-cesto");
 
-  // --- Imagem do produto ---
+
   const img = document.createElement("img");
   img.src = produto.image;
   img.alt = produto.title;
   img.classList.add("img-cesto");
   artigo.appendChild(img);
 
-  // --- Nome do produto ---
   const nome = document.createElement("h3");
   nome.textContent = produto.title;
   artigo.appendChild(nome);
 
-  // --- Preço ---
+
   const preco = document.createElement("span");
   preco.textContent = ` € ${produto.price.toFixed(2)}`;
   artigo.appendChild(preco);
 
-  // --- Botão remover ---
+
   const btnRemover = document.createElement("button");
   btnRemover.textContent = "Remover";
   btnRemover.classList.add("remover");
@@ -208,7 +207,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       atualizarListaFiltrada();
     });
 
-    // Pesquisa em tempo real
+
     const inputPesquisa = document.getElementById("pesquisa");
     inputPesquisa.addEventListener("input", () => {
       textoPesquisa = inputPesquisa.value;
@@ -231,7 +230,7 @@ btnComprar.addEventListener("click", async () => {
   const estudante = estudanteCheck.checked;
   const cupao = cupaoInput.value.trim();
 
-  // Pegar produtos do cesto (podes adaptar se tiver outro array)
+
   const produtosIds = cesto.map(p => p.id);
 
   if (produtosIds.length === 0) {

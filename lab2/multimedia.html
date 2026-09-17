@@ -1,13 +1,14 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Multimédia - Tóquio</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <header>
-      <h1>Multimedia</h1>
+      <h1>Multimédia</h1>
       <nav>
         <ul>
           <li><a href="index.html">Home</a></li>
@@ -17,5 +18,53 @@
         </ul>
       </nav>
     </header>
+
+    <main>
+      <section>
+        <h2>Multimédia</h2>
+        <p>Nesta página encontra conteúdos multimédia.</p>
+
+        <p>
+          <a href="#fotografias">Fotografias</a> | <a href="#video">Vídeo</a> |
+          <a href="#poema">Poema</a>
+        </p>
+      </section>
+
+      <section>
+        <h3 id="fotografias">Fotografias</h3>
+        <div class="fotografias">
+          <img src="images/foto1.jpg" alt="Torre de Tóquio" />
+          <img src="images/foto2.jpg" alt="Cruzamento de Shibuya" />
+          <img src="images/foto3.jpg" alt="Templo Senso-ji" />
+          <img src="images/foto4.jpg" alt="Shinjuku Gyoen" />
+          <img src="images/foto5.jpg" alt="Tokyo Skytree" />
+          <img src="images/foto6.jpg" alt="Bairro de Akihabara" />
+          <img src="images/foto7.jpg" alt="Parque Ueno" />
+          <img src="images/foto8.jpg" alt="Rua de Ginza" />
+        </div>
+      </section>
+
+      <section>
+        <h3 id="video">Vídeo</h3>
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/28ZjrtD_iL0"
+          title="Vídeo de Tóquio"
+          frameborder="0"
+          allowfullscreen
+        ></iframe>
+      </section>
+
+      <section>
+        <h3 id="poema">Poesia</h3>
+        <div class="poema">
+          <p>Luzes de neon na noite escura,</p>
+          <p>Tóquio desperta em flor de cerejeira,</p>
+          <p>Entre o betão e a tradição pura,</p>
+          <p>A cidade brilha à sua maneira.</p>
+        </div>
+      </section>
+    </main>
   </body>
 </html>

@@ -7,8 +7,6 @@ CSS
 }
 
 
-
-
 .fotografias {
     display: flex;
     flex-direction: row;
@@ -21,3 +19,26 @@ CSS
     border-radius: 20px;
 }
 
+
+
+.tabela-info {
+    width: 80%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.tabela-info th, .tabela-info td {
+    border: 1px solid #333;
+    padding: 8px 12px;
+    text-align: left;
+}
+
+.tabela-info th {
+    background-color: #f2f2f2;
+    color: #b71c1c;
+}
+
+.tabela-info td {
+    color: #333;
+
+}

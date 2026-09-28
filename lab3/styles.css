@@ -1,0 +1,221 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #301c41;
+  color: #f8f9fa;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+main {
+  flex: 1;
+  padding-top: 75px;
+}
+a {
+  color: #6f95ff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+a:hover {
+  color: white;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(48, 28, 65, 0.85);
+  backdrop-filter: blur(10px);
+  padding: 15px 40px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+header h1 {
+  color: #6f95ff;
+  font-size: 1.5rem;
+}
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 15px;
+  align-items: center;
+}
+nav ul li a {
+  color: #f8f9fa;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition:
+    background-color 0.3s,
+    transform 0.2s;
+}
+nav ul li a:hover {
+  background-color: #5c65c0;
+  transform: translateY(-2px);
+}
+.btn-voltar a {
+  background-color: #6f95ff;
+  color: #301c41;
+  font-weight: bold;
+}
+.btn-voltar a:hover {
+  background-color: white;
+  color: #301c41;
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+    background-color: #301c41;
+  }
+  nav {
+    width: 100%;
+  }
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #413b6b;
+    padding: 15px;
+    border-radius: 12px;
+  }
+  nav ul li {
+    width: 45%;
+    text-align: center;
+    margin-bottom: 5px;
+  }
+  nav ul li a {
+    display: block;
+    width: 100%;
+    font-size: 0.9rem;
+    padding: 12px 5px;
+  }
+  .btn-voltar {
+    width: 100%;
+    margin-top: 10px;
+  }
+  main {
+    padding-top: 180px;
+  }
+}
+
+.ecra-inteiro {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  text-align: center;
+}
+.ecra-inteiro:nth-child(even) {
+  background-color: #413b6b;
+}
+.ecra-inteiro:nth-child(odd) {
+  background-color: #301c41;
+}
+
+.seccao-emblematica {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  margin-top: -75px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#video-fundo-cidade {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -2;
+  transform: translateX(-50%) translateY(-50%);
+  object-fit: cover;
+}
+.overlay-cidade {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(48, 28, 65, 0.4);
+  z-index: -1;
+}
+.seccao-emblematica h2 {
+  position: relative;
+  z-index: 2;
+  font-size: 6vw;
+  color: #6f95ff;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.fotografias {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  gap: 20px;
+  max-width: 1000px;
+  margin-top: 30px;
+}
+.fotografias img {
+  width: 200px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+  cursor: pointer;
+}
+.fotografias img:hover {
+  transform: scale(1.15) rotate(2deg);
+  box-shadow: 0 10px 25px #6f95ff;
+  z-index: 10;
+}
+
+.tabela-info {
+  width: 100%;
+  max-width: 700px;
+  border-collapse: collapse;
+  margin: 30px auto;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #413b6b;
+}
+.tabela-info th,
+.tabela-info td {
+  border: 1px solid #5c65c0;
+  padding: 15px;
+}
+.tabela-info th {
+  background-color: #5c65c0;
+  color: #f8f9fa;
+}
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #301c41;
+  border-top: 1px solid #413b6b;
+  margin-top: auto;
+}

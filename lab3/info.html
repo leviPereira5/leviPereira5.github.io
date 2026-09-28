@@ -15,70 +15,107 @@
           <li><a href="local.html">Localização</a></li>
           <li><a href="multimedia.html">Multimédia</a></li>
           <li><a href="info.html">Informação</a></li>
+          <li class="btn-voltar">
+            <a href="../index.html">⬅ Voltar ao Portefólio</a>
+          </li>
         </ul>
       </nav>
     </header>
 
-    <main>
-      <h2>Informações</h2>
-      <p>
-        Descobre os dados demográficos, geográficos e algumas curiosidades
-        fascinantes sobre a capital do Japão.
-      </p>
-
-      <table class="tabela-info">
-        <tbody>
-          <tr>
-            <th scope="row" rowspan="2">Demografia</th>
-            <th scope="row">População</th>
-            <td>Aprox. 14 milhões hab.</td>
-          </tr>
-          <tr>
-            <th scope="row">Densidade</th>
-            <td>6.300 hab/km²</td>
-          </tr>
-          <tr>
-            <th scope="row" rowspan="3">Geografia</th>
-            <th scope="row">Área</th>
-            <td>2.194 km²</td>
-          </tr>
-          <tr>
-            <th scope="row">Região</th>
-            <td>Kanto (Ilha de Honshu)</td>
-          </tr>
-          <tr>
-            <th scope="row">País</th>
-            <td>Japão</td>
-          </tr>
-          <tr>
-            <th scope="row">Website</th>
-            <td colspan="2">
-              <a href="https://www.metro.tokyo.lg.jp/" target="_blank"
-                >Portal do Governo de Tóquio</a
-              >
-            </td>
-          </tr>
-        </tbody>
-      </table>
-
-      <section>
-        <h3>Curiosidades sobre Tóquio</h3>
-        <ul>
-          <li>É a área metropolitana mais populosa do mundo.</li>
-          <li>
-            O cruzamento de Shibuya é considerado o mais movimentado do planeta.
-          </li>
-          <li>Possui mais de 160.000 restaurantes espalhados pela cidade.</li>
-          <li>
-            A Torre de Tóquio é inspirada na Torre Eiffel, mas é ligeiramente
-            mais alta.
-          </li>
-          <li>
-            Apesar de ser uma metrópole ultra-tecnológica, abriga centenas de
-            templos históricos.
-          </li>
-        </ul>
+    <main class="main-info">
+      <section class="seccao-intro-info">
+        <h2>Informações sobre Tóquio</h2>
+        <p>
+          Descobre os dados demográficos, geográficos e algumas curiosidades
+          fascinantes sobre a capital do Japão.
+        </p>
       </section>
+
+      <!-- GRELHA 2D COM DISPLAY: GRID E ESPAÇOS VAZIOS -->
+      <div class="grid-informacoes">
+        <!-- Bloco 1: Tabela Demográfica (ocupa 2 colunas) -->
+        <div class="grid-item item-tabela">
+          <table class="tabela-info">
+            <tbody>
+              <tr>
+                <th scope="row" rowspan="2">Demografia</th>
+                <th scope="row">População</th>
+                <td>Aprox. 14 milhões hab.</td>
+              </tr>
+              <tr>
+                <th scope="row">Densidade</th>
+                <td>6.300 hab/km²</td>
+              </tr>
+              <tr>
+                <th scope="row" rowspan="3">Geografia</th>
+                <th scope="row">Área</th>
+                <td>2.194 km²</td>
+              </tr>
+              <tr>
+                <th scope="row">Região</th>
+                <td>Kanto (Ilha de Honshu)</td>
+              </tr>
+              <tr>
+                <th scope="row">País</th>
+                <td>Japão</td>
+              </tr>
+              <tr>
+                <th scope="row">Website</th>
+                <td colspan="2">
+                  <a href="https://www.metro.tokyo.lg.jp/" target="_blank"
+                    >Portal do Governo de Tóquio</a
+                  >
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Bloco 2: Imagem do Pixabay (Cerejeiras / Japão) -->
+        <div class="grid-item item-imagem-1">
+          <img src="images/foto3.jpg" alt="Paisagem de Tóquio" />
+        </div>
+
+        <!-- Bloco 3: Espaço Vazio / Respiro Visual (Whitespace criativo exigido) -->
+        <div class="grid-item item-espaco-vazio">
+          <div class="cartao-inspiracao">
+            <p>
+              ✦ "Tradição e modernidade coexistem em perfeita harmonia nas ruas
+              de Tóquio."
+            </p>
+          </div>
+        </div>
+
+        <!-- Bloco 4: Curiosidades -->
+        <div class="grid-item item-curiosidades">
+          <h3>Curiosidades sobre Tóquio</h3>
+          <ul>
+            <li>É a área metropolitana mais populosa do mundo.</li>
+            <li>
+              O cruzamento de Shibuya é considerado o mais movimentado do
+              planeta.
+            </li>
+            <li>Possui mais de 160.000 restaurantes espalhados pela cidade.</li>
+            <li>
+              A Torre de Tóquio é inspirada na Torre Eiffel, mas é ligeiramente
+              mais alta.
+            </li>
+            <li>
+              Apesar de ser uma metrópole ultra-tecnológica, abriga centenas de
+              templos históricos.
+            </li>
+          </ul>
+        </div>
+
+        <!-- Bloco 5: Segunda Imagem do Pixabay -->
+        <div class="grid-item item-imagem-2">
+          <img src="images/foto6.jpg" alt="Tecnologia em Tóquio" />
+        </div>
+      </div>
     </main>
+
+    <footer>
+      <p>DIW 2026</p>
+    </footer>
   </body>
 </html>

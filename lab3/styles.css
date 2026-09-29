@@ -467,3 +467,95 @@ footer {
   color: #F8F9FA;
   line-height: 1.6;
 }
+
+
+.main-home {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+
+.hero-home {
+  background: linear-gradient(135deg, #413B6B, #301C41);
+  border: 1px solid rgba(111, 149, 255, 0.3);
+  border-radius: 20px;
+  padding: 50px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.hero-home h2 {
+  font-size: 2.8rem;
+  color: #6F95FF;
+  margin-bottom: 20px;
+}
+
+.hero-home p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #F8F9FA;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+
+.grelha-atalhos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.cartao-atalho {
+  background-color: #413B6B;
+  border: 1px solid rgba(111, 149, 255, 0.2);
+  border-radius: 16px;
+  padding: 30px;
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.cartao-atalho:hover {
+  transform: translateY(-8px);
+  background-color: #5C65C0;
+  box-shadow: 0 12px 25px rgba(111, 149, 255, 0.3);
+}
+
+.cartao-atalho h3 {
+  color: #6F95FF;
+  font-size: 1.5rem;
+}
+
+.cartao-atalho p {
+  color: #F8F9FA;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+
+.cartao-atalho:hover h3,
+.cartao-atalho:hover p {
+  color: #FFFFFF;
+}
+
+
+@media (max-width: 768px) {
+  .hero-home {
+    padding: 30px 20px;
+  }
+
+  .hero-home h2 {
+    font-size: 2rem;
+  }
+
+  .grelha-atalhos {
+    grid-template-columns: 1fr;
+  }
+}

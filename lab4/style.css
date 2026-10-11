@@ -1,0 +1,147 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background-color: #f0f2f5;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  transition: background-color 0.5s ease;
+}
+
+
+header {
+  width: 100%;
+  background-color: #2c3e50;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #3498db;
+}
+
+
+main {
+  background-color: #ffffff;
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 450px;
+  margin: auto;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 12px;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid #eaeaea;
+}
+
+section:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+p {
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+
+input {
+  width: 100%;
+  max-width: 250px;
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.2);
+}
+
+button {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  color: white;
+  background-color: #555;
+  transition: transform 0.1s ease, opacity 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+  opacity: 0.9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+button:active {
+  transform: scale(0.96);
+}
+
+.pintar {
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.pintar p {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.btn-red {
+  background-color: #ff4d4d;
+}
+
+.btn-green {
+  background-color: #28a745;
+}
+
+.btn-blue {
+  background-color: #007bff;
+}
+
+.escolher-cor button, .contador button {
+  background-color: #333;
+  margin-top: 5px;
+}
+
+.contador p {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #007bff;
+  margin-bottom: 5px;
+}

@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab 4</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li class="btn-voltar">
+            <a href="../index.html">⬅ Voltar a Hero Page</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="saudar">
+        <p>1. Passa por aqui!</p>
+      </section>
+
+      <section class="pintar">
+        <p>2. pinta-me!!</p>
+        <button class="cor" data-color="red">Red</button>
+        <button class="cor" data-color="green">Green</button>
+        <button class="cor" data-color="blue">Blue</button>
+      </section>
+
+      <section class="escrever">
+        <p>3. Escreva algo !!</p>
+        <input type="text" />
+      </section>
+
+      <section class="escolher-cor">
+        <p>4. escreva um cor em inglês!!!</p>
+        <select id="lista_cores">
+          <option value="white">Branco</option>
+          <option value="lightblue">Azul claro</option>
+          <option value="lightgrey">Cinza claro</option>
+          <option value="pink">Rosa</option>
+          <option value="lightyellow">Amarelo claro</option>
+          <option value="mediumpurple">Roxo claro</option>
+        </select>
+      </section>
+
+      <section class="exercicio-flex">
+        <p>5. Organiza as bolas!</p>
+
+        <select id="select-flex">
+          <option value="row">Row (Linha)</option>
+          <option value="row-reverse">Row Reverse (Linha Invertida)</option>
+          <option value="column">Column (Coluna)</option>
+          <option value="column-reverse">
+            Column Reverse (Coluna Invertida)
+          </option>
+        </select>
+
+        <div class="container-bolas">
+          <div class="bola"></div>
+          <div class="bola"></div>
+          <div class="bola"></div>
+          <div class="bola"></div>
+        </div>
+      </section>
+
+      <section class="formulario">
+        <p>6. Diz-nos quem és!</p>
+
+        <form id="meu-formulario">
+          <input
+            id="nome"
+            type="text"
+            placeholder="Insira o seu nome"
+            required
+          />
+
+          <input
+            id="idade"
+            type="number"
+            placeholder="Insira a sua idade"
+            required
+          />
+
+          <button type="submit">Submeter</button>
+        </form>
+
+        <p id="mensagem-resultado"></p>
+      </section>
+
+      <section class="contador">
+        <p>0</p>
+        <button class="incrementa">incrementa</button>
+        <button class="decrementa">Decrementa</button>
+        <button class="reset">Reset</button>
+      </section>
+
+      <section class="temporizador">
+        <p>7. Temporizador Automático</p>
+        <p id="valor-tempo">0</p>
+      </section>
+    </main>
+  </body>
+</html>

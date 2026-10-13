@@ -29,7 +29,6 @@ p_saudar.addEventListener("mouseout", function saudar_tira(){
 })
 
 
-
 // parte de pintar o nome
 botaoRed.addEventListener("click", function pintarVermelho(){
     p_pintar.style.color = "red"
@@ -42,7 +41,6 @@ botaoBlue.addEventListener("click", function pintarAzul(){
 botaoGreen.addEventListener("click", function pintarAzul(){
     p_pintar.style.color = "green"
 })
-
 
 
 //parte de ir escrevendo

@@ -8,7 +8,7 @@ const nodeSpanTotal = document.querySelector(".colecao span");
 const nodeUlRepetidos = document.querySelector(".repetidos ul");
 const nodeSpanRepetidos= document.querySelector(".repetidos span")
 
-// estado da aplicacao
+// local Storage
 if (!localStorage.getItem('colecao')) {
     localStorage.setItem('colecao', '[]');
 }
@@ -25,10 +25,10 @@ function atualizarLista(lista,ulCromos,spanTotal) {
     ulCromos.innerHTML = ""; // aqui é para limpar o conteudo da lista ("o conteudo atual")
 
     lista.forEach(function(element, i) { // vou percorrer cada elemento e para cada um crio um li e o add ao dom dentro do ul
-        const nodeLi = document.createElement("li");
+        const nodeLi = document.createElement("li"); // crio um elemento li para cada um deles
 
         if(ulCromos === nodeUlRepetidos){
-            nodeLi.innerHTML = `${element} <button>Eliminar</button>`;
+            nodeLi.innerHTML = `${element} <button>Eliminar</button>`; // criar o botao ao lado do meu numero
             nodeLi.querySelector('button').onclick = function() {
                 apagarRepetido(i);
             }
@@ -43,7 +43,7 @@ function atualizarLista(lista,ulCromos,spanTotal) {
     spanTotal.textContent = lista.length; // Atualizar o contador
 }
 
-function apagarRepetido(i) {
+function apagarRepetido(i) { // funcao auxiliar para apagar o numero repetido quando crio o botao no meu dom ao lado do numero
     repetidos.splice(i, 1);
     atualizarLista(repetidos, nodeUlRepetidos, nodeSpanRepetidos);
     localStorage.setItem("repetidos", JSON.stringify(repetidos));

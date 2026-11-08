@@ -87,14 +87,14 @@ function criarProdutoCesto(produto, i){
 }
 
 function atualizaCesto(){
-    const produto_selecionado = JSON.parse(localStorage.getItem("produtos-selecionados"));
+    const produtos_selecionados = JSON.parse(localStorage.getItem("produtos-selecionados"));
     const container_cesto = document.querySelector("#cesto");
 
     container_cesto.innerHTML = "<h2>Cesto</h2>";
 
     let preco_total = 0;
 
-    produto_selecionado.forEach((produto, i) => {
+    produtos_selecionados.forEach((produto, i) => {
         const article_cesto = criarProdutoCesto(produto, i);
         container_cesto.appendChild(article_cesto);
 
